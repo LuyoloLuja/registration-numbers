@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+form {
+  margin: auto;
+  max-width: fit-content;
+  padding: 10px;
+}
+form input {
+  outline: none;
+}
+form button {
+  float: right;
+  margin-top: 5px;
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+}
+form .reg-plate {
+  clear: both;
+  float: right;
+  border: 2px solid #000;
+  width: 60px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: silver;
+}
