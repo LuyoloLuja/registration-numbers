@@ -4,11 +4,18 @@ var plateNumberOne = document.querySelector(".reg-one");
 var plateNumberTwo = document.querySelector(".reg-two");
 var plateNumberThree = document.querySelector(".reg-three");
 
-function regNumbers(){
+function registrationNumbers(){
+  var plateNumbers = document.querySelector("input[name='numbers']:checked");
 
-  var regNumber = textElement.value;
-  if (regNumber) {
-    plateNumberOne.innerHTML === regNumber;
+  var regNumber = "";
+  if (plateNumbers) {
+    regNumber = plateNumbers.value;
+  }
+
+  var textboxValue = textElement.value;
+
+  if (textboxValue) {
+    plateNumberOne.innerHTML === textboxValue;
   }
 }
-addButton.addEventListener('click', regNumbers);
+addButton.addEventListener('click', registrationNumbers);
