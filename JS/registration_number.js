@@ -4,18 +4,14 @@ var plateNumberOne = document.querySelector(".reg-one");
 var plateNumberTwo = document.querySelector(".reg-two");
 var plateNumberThree = document.querySelector(".reg-three");
 
-function registrationNumbers(){
-  var plateNumbers = document.querySelector("input[name='numbers']:checked");
+var regFactoryInstance = RegFactory();
 
-  var regNumber = "";
-  if (plateNumbers) {
-    regNumber = plateNumbers.value;
-  }
+function registrationNumbers(){
+//  var towns = document.querySelector(".numbers");
+//  var townSelected = town.options[towns.selected].text;
 
   var textboxValue = textElement.value;
 
-  if (textboxValue) {
-    plateNumberOne.innerHTML === textboxValue;
-  }
+  plateNumberOne.innerHTML = regFactoryInstance.regSelection(textboxValue);
 }
 addButton.addEventListener('click', registrationNumbers);

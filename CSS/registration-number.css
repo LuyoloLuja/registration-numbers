@@ -45,7 +45,7 @@ form .reg-plate {
   clear: both;
   color: #314152;
   border: 2px solid #fff;
-  width: 60px;
+  width: fit-content;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
