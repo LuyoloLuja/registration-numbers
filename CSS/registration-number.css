@@ -41,7 +41,7 @@ form select {
   padding: 5px;
   border: none;
 }
-form .reg-plate {
+form li {
   clear: both;
   color: #314152;
   border: 2px solid #fff;
@@ -50,4 +50,5 @@ form .reg-plate {
   margin-top: 10px;
   border-radius: 5px;
   background-color: #FDCE4B;
+  list-style-type: none;
 }
