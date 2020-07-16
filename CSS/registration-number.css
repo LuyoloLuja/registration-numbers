@@ -1,4 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 body {
+  font-family: 'Lato', Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -45,7 +47,7 @@ form li {
   clear: both;
   color: #314152;
   border: 2px solid #fff;
-  width: fit-content;
+  width: inherit;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;

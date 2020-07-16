@@ -5,6 +5,18 @@ var regList = document.querySelector(".reg-plate");
 var regFactoryInstance = RegFactory();
 
 var regNumbers = [];
+
+function textValue(){
+  let theTextValue = "";
+  let textElementValue = textElement.value;
+  if(textElementValue.startsWith("CA") || textElementValue.startsWith("CJ") || textElementValue.startsWith("CAG") || textElementValue.startsWith("CL")){
+    theTextValue = textElementValue;
+  }
+  regNumbers.push(theTextValue);
+  appendRegNumbers(regNumbers);
+}
+addButton.addEventListener('click', textValue);
+
 function appendRegNumbers(plates){
   regList.innerHTML = "";
 
@@ -16,12 +28,4 @@ function appendRegNumbers(plates){
   }
 }
 
-function textValue(){
-  let theTextValue = "Registration Number";
-  if(textElement.value){
-    theTextValue = textElement.value;
-  }
-  regNumbers.push(theTextValue);
-  appendRegNumbers(regNumbers);
-}
-addButton.addEventListener('click', textValue);
+
