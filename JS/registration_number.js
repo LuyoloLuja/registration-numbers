@@ -1,17 +1,16 @@
 var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
-var plateNumberOne = document.querySelector(".reg-one");
-var plateNumberTwo = document.querySelector(".reg-two");
-var plateNumberThree = document.querySelector(".reg-three");
+var regList = document.querySelector(".regList");
 
 var regFactoryInstance = RegFactory();
 
-function registrationNumbers(){
-//  var towns = document.querySelector(".numbers");
-//  var townSelected = town.options[towns.selected].text;
-
-  var textboxValue = textElement.value;
-
-  plateNumberOne.innerHTML = regFactoryInstance.regSelection(textboxValue);
+var regNumbers = [];
+function appendRegNumbers(plates){
+  regList.innerHTML = "";
+  for(var i = 0; i < plates.length; i++){
+    let currentPlate = plates[i];
+    let addingElement = document.createElement("li");
+    regList.appendChild(addingElement);
+  }
 }
-addButton.addEventListener('click', registrationNumbers);
+addButton.addEventListener('click', );
