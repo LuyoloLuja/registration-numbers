@@ -2,15 +2,15 @@ var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
 
-var regFactoryInstance = RegFactory();
+//var regFactoryInstance = RegFactory();
 
 var regNumbers = [];
 
 function textValue(){
-  let theTextValue = "Enter Reg Number!";
+  let theTextValue = "";
   let textElementValue = textElement.value;
   
-  if(textElementValue.startsWith("CA") || textElementValue.startsWith("CJ") || textElementValue.startsWith("CAG") || textElementValue.startsWith("CL")){
+  if(textElementValue !== ""){
     theTextValue = textElementValue;
   }
   regNumbers.push(theTextValue);
