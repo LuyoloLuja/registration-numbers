@@ -19,6 +19,7 @@ function textValue(){
 addButton.addEventListener('click', textValue);
 
 function appendRegNumbers(plates){
+  regList.innerHTML = "";
 
   for(var i = 0; i < plates.length; i++){
     let currentPlate = plates[i];
@@ -36,6 +37,9 @@ function dropdownList(){
   if (registrations) {
     townSelected = registrations.value;
   }
-  
+
+  if (townSelected) {
+
+  }
 }
 
