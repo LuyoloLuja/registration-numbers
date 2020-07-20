@@ -1,6 +1,7 @@
 var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
+var registration = document.querySelector(".drop-down");
 
 //var regFactoryInstance = RegFactory();
 
@@ -15,6 +16,7 @@ function textValue(){
   }
   regNumbers.push(theTextValue);
   appendRegNumbers(regNumbers);
+//  dropdownList();
 }
 addButton.addEventListener('click', textValue);
 
@@ -30,16 +32,23 @@ function appendRegNumbers(plates){
   }
 }
 
-function dropdownList(){
-  var registrations = document.querySelector("option[name='registrations']:checked");
+function dropdownList(list, value){
+  var selectedCity = registration.options[registration.selectedIndex].value;
 
-  var townSelected = "";
-  if (registrations) {
-    townSelected = registrations.value;
+  var filteredCity = [];
+  for(var i = 0; i<list.length; i++){
+    selectedCity = list[i];
+    if (selectedCity.indexOf(value) !== -1) {
+      filteredCity.push(selectedCity)
+    }
   }
-
-  if (townSelected) {
-
-  }
+  return filteredCity;
 }
+
+registration.addEventListener('keyup', function(){
+  regList.innerHTML = "";
+
+  const myFilteredCity = filter(regNumbers, textElementValue);
+  appendRegNumbers(myFilteredCity);
+})
 
