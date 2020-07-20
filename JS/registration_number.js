@@ -29,4 +29,13 @@ function appendRegNumbers(plates){
   }
 }
 
+function dropdownList(){
+  var registrations = document.querySelector("option[name='registrations']:checked");
+
+  var townSelected = "";
+  if (registrations) {
+    townSelected = registrations.value;
+  }
+  
+}
 
