@@ -13,7 +13,7 @@ function textValue(){
 
   theTextValue = textElementValue.toUpperCase().trim();
   
-  if (theTextValue !== "") {
+  if (theTextValue !== "" && regNumbers.length <= 14) {
 
     if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
       regNumbers.push(theTextValue);
