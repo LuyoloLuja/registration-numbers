@@ -19,9 +19,7 @@ function textValue(){
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
     }  
-    
   }
-//  dropdownList();
 }
 addButton.addEventListener('click', textValue);
 
@@ -37,7 +35,7 @@ function appendRegNumbers(plates){
   }
 }
 
-/*function dropdownList(list, value){
+function dropdownList(list, value){
   var selectedCity = registration.options[registration.selectedIndex].value;
 
   var filteredCity = [];
@@ -53,7 +51,7 @@ function appendRegNumbers(plates){
 registration.addEventListener('keyup', function(){
   regList.innerHTML = "";
 
-  const myFilteredCity = filter(regNumbers, textElementValue);
+  const myFilteredCity = dropdownList(regNumbers, textElementValue);
   appendRegNumbers(myFilteredCity);
-})*/
+})
 
