@@ -11,11 +11,13 @@ function textValue(){
   let theTextValue = "";
   let textElementValue = textElement.value;
   
-  if(textElementValue !== ""){
-    theTextValue = textElementValue;
+  if (textElementValue !== "") {
+    if(textElementValue.startsWith("CA ") || textElementValue.startsWith("CL ") || textElementValue.startsWith("CJ ") || textElementValue.startsWith("CAG ")){
+    theTextValue = textElementValue.toUpperCase().trim();
   }
   regNumbers.push(theTextValue);
   appendRegNumbers(regNumbers);
+  }
 //  dropdownList();
 }
 addButton.addEventListener('click', textValue);
@@ -32,7 +34,7 @@ function appendRegNumbers(plates){
   }
 }
 
-function dropdownList(list, value){
+/*function dropdownList(list, value){
   var selectedCity = registration.options[registration.selectedIndex].value;
 
   var filteredCity = [];
@@ -50,5 +52,5 @@ registration.addEventListener('keyup', function(){
 
   const myFilteredCity = filter(regNumbers, textElementValue);
   appendRegNumbers(myFilteredCity);
-})
+})*/
 
