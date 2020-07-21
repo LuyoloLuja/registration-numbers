@@ -13,10 +13,10 @@ function textValue(){
   
   if (textElementValue !== "") {
     if(textElementValue.startsWith("CA ") || textElementValue.startsWith("CL ") || textElementValue.startsWith("CJ ") || textElementValue.startsWith("CAG ")){
-    theTextValue = textElementValue.toUpperCase().trim();
-  }
-  regNumbers.push(theTextValue);
-  appendRegNumbers(regNumbers);
+      theTextValue = textElementValue.toUpperCase().trim();
+      regNumbers.push(theTextValue);
+      appendRegNumbers(regNumbers);
+    }  
   }
 //  dropdownList();
 }
