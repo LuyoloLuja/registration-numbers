@@ -10,10 +10,12 @@ var regNumbers = [];
 function textValue(){
   let theTextValue = "";
   let textElementValue = textElement.value;
+
+  theTextValue = textElementValue.toUpperCase().trim();
   
   if (textElementValue !== "") {
-    if(textElementValue.startsWith("CA ") || textElementValue.startsWith("CL ") || textElementValue.startsWith("CJ ") || textElementValue.startsWith("CAG ")){
-      theTextValue = textElementValue.toUpperCase().trim();
+    
+    if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
     }  
