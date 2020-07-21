@@ -13,12 +13,13 @@ function textValue(){
 
   theTextValue = textElementValue.toUpperCase().trim();
   
-  if (textElementValue !== "") {
-    
+  if (theTextValue !== "") {
+
     if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
     }  
+    
   }
 //  dropdownList();
 }
