@@ -15,9 +15,11 @@ function textValue(){
   
   if (theTextValue !== "" && regNumbers.length <= 14) {
 
-    if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
-      regNumbers.push(theTextValue);
-      appendRegNumbers(regNumbers);
+    if (!regNumbers.includes(theTextValue)) {
+      if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
+        regNumbers.push(theTextValue);
+        appendRegNumbers(regNumbers);
+      }
     }  
   }
 }
@@ -35,23 +37,8 @@ function appendRegNumbers(plates){
   }
 }
 
-function dropdownList(list, value){
+function listFiltering(list, value){
   var selectedCity = registration.options[registration.selectedIndex].value;
 
-  var filteredCity = [];
-  for(var i = 0; i<list.length; i++){
-    selectedCity = list[i];
-    if (selectedCity.indexOf(value) !== -1) {
-      filteredCity.push(selectedCity)
-    }
-  }
-  return filteredCity;
+  
 }
-
-registration.addEventListener('keyup', function(){
-  regList.innerHTML = "";
-
-  const myFilteredCity = dropdownList(regNumbers, textElementValue);
-  appendRegNumbers(myFilteredCity);
-})
-
