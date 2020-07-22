@@ -2,6 +2,7 @@ var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
 var registration = document.querySelector(".drop-down");
+var filterButton = document.querySelector(".filterButton");
 
 //var regFactoryInstance = RegFactory();
 
@@ -17,9 +18,9 @@ function textValue(){
 
     if (!regNumbers.includes(theTextValue)) {
       if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
-        regNumbers.push(theTextValue);
-        appendRegNumbers(regNumbers);
-      }
+      regNumbers.push(theTextValue);
+      appendRegNumbers(regNumbers);
+    }
     }  
   }
 }
@@ -37,8 +38,17 @@ function appendRegNumbers(plates){
   }
 }
 
-function listFiltering(list, value){
+function listFiltering(){
   var selectedCity = registration.options[registration.selectedIndex].value;
 
-  
+  alert(selectedCity)
+  /*var filteredReg = [];
+  for(var i = 0; i < regList.length; i++){
+    var currentReg = regList[i];
+    if (currentReg.startsWith(selectedCity)) {
+      filteredReg.push(currentReg);
+    }
+  }
+  */
 }
+filterButton.addEventListener('click', listFiltering);
