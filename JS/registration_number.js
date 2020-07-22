@@ -24,6 +24,7 @@ function textValue(){
     }  
   }
 }
+
 addButton.addEventListener('click', textValue);
 
 function appendRegNumbers(plates){
@@ -36,19 +37,20 @@ function appendRegNumbers(plates){
     addingElement.innerHTML = currentPlate;
     regList.appendChild(addingElement);
   }
+
 }
 
 function listFiltering(){
   var selectedCity = registration.options[registration.selectedIndex].value;
-
-  alert(selectedCity)
-  /*var filteredReg = [];
-  for(var i = 0; i < regList.length; i++){
-    var currentReg = regList[i];
+  var filteredReg = [];
+  
+  for(var i = 0; i < regNumbers.length; i++){
+    var currentReg = regNumbers[i];
     if (currentReg.startsWith(selectedCity)) {
       filteredReg.push(currentReg);
     }
   }
-  */
+  appendRegNumbers(filteredReg);
+
 }
 filterButton.addEventListener('click', listFiltering);
