@@ -4,7 +4,7 @@ var regList = document.querySelector(".reg-plate");
 var registration = document.querySelector(".drop-down");
 var filterButton = document.querySelector(".filterButton");
 
-//var regFactoryInstance = RegFactory();
+var regFactoryInstance = RegFactory();
 
 var regNumbers = [];
 
@@ -15,13 +15,15 @@ function textValue(){
   theTextValue = textElementValue.toUpperCase().trim();
   
   if (theTextValue !== "" && regNumbers.length <= 14) {
-
+    
     if (!regNumbers.includes(theTextValue)) {
       if(theTextValue.startsWith("CA ") || theTextValue.startsWith("CL ") || theTextValue.startsWith("CJ ") || theTextValue.startsWith("CAG ")){
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
     }
     }  
+    /*regFactoryInstance.regSelection(theTextValue)
+      appendRegNumbers(regNumbers);*/
   }
 }
 
