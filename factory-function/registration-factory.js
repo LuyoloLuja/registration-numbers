@@ -18,13 +18,22 @@ function RegFactory(){
   	}
   }*/
 
-  function filter(){
-  	var regFilter = []
-  }
+  function filter(regPlates){
+  	var regFilter = [];
+
+  	for(var i = 0; i < registrationNumbers.length; i++){
+  		var currentNumberPlate = registrationNumbers[i]
+  			if(currentNumberPlate.startsWith(regPlates)){
+  				return regFilter;
+  			}
+  		}
+  	}
+  
 
 
   return {
     regSelection,
-    //appendRegNums
+    //appendRegNums,
+    filter
   }
 }
