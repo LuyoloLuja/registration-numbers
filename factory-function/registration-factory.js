@@ -1,9 +1,11 @@
 function RegFactory(){
-  var regNumbers = [];
+  var registrationNumbers = [];
 
   function regSelection(selectReg){
-    if(selectReg.startsWith("CA") || selectReg.startsWith("CJ") || selectReg.startsWith("CAG") || selectReg.startsWith("CL") && selectReg !== undefined){
-      return selectReg;
+	    if (!registrationNumbers.includes(selectReg)) {
+	    	if(selectReg.startsWith("CA") || selectReg.startsWith("CJ") || selectReg.startsWith("CAG") || selectReg.startsWith("CL") && selectReg !== undefined){
+	    	registrationNumbers.push(selectReg);
+	    }
     }
   }
 
