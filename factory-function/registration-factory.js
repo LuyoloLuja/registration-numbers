@@ -4,7 +4,6 @@ function RegFactory(){
   function regSelection(selectReg){
   		if(selectReg.startsWith("CA ") || selectReg.startsWith("CL ") || selectReg.startsWith("CJ ") || selectReg.startsWith("CAG ")){
       	registrationNumbers.push(selectReg);
-      	//registrationNumbers += selectReg;
     }
   }
 
