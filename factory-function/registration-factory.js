@@ -3,7 +3,7 @@ function RegFactory(){
 
   function regSelection(selectReg){
   		if(selectReg.startsWith("CA ") || selectReg.startsWith("CL ") || selectReg.startsWith("CJ ") || selectReg.startsWith("CAG ")){
-      	return selectReg;
+      	registrationNumbers += selectReg;
     }
   }
 
@@ -24,9 +24,10 @@ function RegFactory(){
   	for(var i = 0; i < registrationNumbers.length; i++){
   		var currentNumberPlate = registrationNumbers[i]
   			if(currentNumberPlate.startsWith(regPlates)){
-  				return regFilter;
+  				regFilter.push(currentNumberPlate);
   			}
   		}
+  		return regFilter;
   	}
   
 
