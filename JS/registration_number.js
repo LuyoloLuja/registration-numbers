@@ -45,8 +45,7 @@ function appendRegNumbers(plates){
 function listFiltering(){
   var selectedCity = registration.options[registration.selectedIndex].value;
   var filteredReg = [];
-  // var addElement = document.createElement("li");
-  // addElement.innerHTML = filteredReg;
+  
   filteredReg.push(regFactoryInstance.filter(selectedCity));
   appendRegNumbers(filteredReg);
 }
