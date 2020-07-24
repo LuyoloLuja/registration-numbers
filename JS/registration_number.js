@@ -16,7 +16,7 @@ function textValue(){
   
   if (theTextValue !== "" && regNumbers.length <= 10) {
     
-    if (!regNumbers.includes(theTextValue)) {
+    if (!regNumbers.includes(theTextValue) && theTextValue.length <= 10) {
       regFactoryInstance.regSelection(theTextValue)    
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
