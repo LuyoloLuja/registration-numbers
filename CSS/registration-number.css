@@ -22,14 +22,22 @@ body {
   padding: 5px;
   margin-top: 2px;
 }
+.container .errorMessages {
+  color: #fff;
+  background-color: red;
+  padding: 3px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+}
 .container button {
   float: right;
-  margin-top: 15px;
   padding: 5px;
   outline: none;
   cursor: pointer;
   color: #314152;
   background-color: #fff;
+  margin-top: 15px;
   border: none;
   border-radius: 5px;
 }
@@ -37,15 +45,15 @@ body {
   color: #314152;
   background-color: #fff;
   outline: none;
-  margin-top: 15px;
-  margin-bottom: 25px;
   padding: 5px;
+  margin-top: 15px;
   border: none;
 }
 .container li {
   clear: both;
   color: #314152;
   border: 2px solid #fff;
+  text-align: center;
   width: inherit;
   padding: 10px;
   margin-top: 10px;

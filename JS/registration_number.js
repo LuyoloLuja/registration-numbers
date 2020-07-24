@@ -3,6 +3,7 @@ var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
 var registration = document.querySelector(".drop-down");
 var filterButton = document.querySelector(".filterButton");
+// var errorMessages = document.querySelector(".errorMessages");
 
 var regFactoryInstance = RegFactory();
 
@@ -14,7 +15,7 @@ function textValue(){
 
   theTextValue = textElementValue.toUpperCase().trim();
   
-  if (theTextValue !== "" && regNumbers.length <= 10) {
+  if (theTextValue !== "" && regNumbers.length <= 9) {
     
     if (!regNumbers.includes(theTextValue) && theTextValue.length <= 10) {
       regFactoryInstance.regSelection(theTextValue)    
@@ -29,20 +30,16 @@ addButton.addEventListener('click', textValue);
 function appendRegNumbers(plates){
   regList.innerHTML = "";
 
-  for(var i = 0; i < plates.length; i++){
-    let currentPlate = plates[i];
-    let addingElement = document.createElement("li");
-
-    addingElement.innerHTML = currentPlate;
-    regList.appendChild(addingElement);
-  }
-
+  let addingElement = document.createElement("li");
+  addingElement.innerHTML = regFactoryInstance.appendRegNums(plates);
+  regList.appendChild(addingElement);
 }
 
 function listFiltering(){
   var selectedCity = registration.options[registration.selectedIndex].value;
   var filteredReg = [];
-  
+  // var addElement = document.createElement("li");
+  // addElement.innerHTML = filteredReg;
   filteredReg.push(regFactoryInstance.filter(selectedCity));
   appendRegNumbers(filteredReg);
 }
@@ -73,6 +70,7 @@ function textValue(){
       regNumbers.push(theTextValue);
       appendRegNumbers(regNumbers);
     }
+  }
   }
 }
 
