@@ -30,13 +30,6 @@ addButton.addEventListener('click', textValue);
 function appendRegNumbers(plates){
   regList.innerHTML = "";
 
-  /*for(var i = 0; i < plates.length; i++){
-    let currentPlate = plates[i];
-    let addingElement = document.createElement("li");
-
-    addingElement.innerHTML = currentPlate;
-    regList.appendChild(addingElement);
-  }*/
   let addingElement = document.createElement("li");
   addingElement.innerHTML = regFactoryInstance.appendRegNums(plates);
   regList.appendChild(addingElement);
@@ -45,7 +38,7 @@ function appendRegNumbers(plates){
 function listFiltering(){
   var selectedCity = registration.options[registration.selectedIndex].value;
   var filteredReg = [];
-  
+
   filteredReg.push(regFactoryInstance.filter(selectedCity));
   appendRegNumbers(filteredReg);
 }
