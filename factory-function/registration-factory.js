@@ -24,7 +24,7 @@ function RegFactory(){
   				regFilter.push(currentNumberPlate);
   			}
   		}
-  		 return regFilter;
+  		return regFilter;
   	}
   
   	/*function errorMessage(regNumbers){
