@@ -1,4 +1,4 @@
-var textElement = document.querySelector(".reg-textbox");
+/*var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
 var registration = document.querySelector(".drop-down");
@@ -43,10 +43,10 @@ function listFiltering(){
   appendRegNumbers(filteredReg);
 }
 filterButton.addEventListener('click', listFiltering);
+*/
 
 
-
-/*var textElement = document.querySelector(".reg-textbox");
+var textElement = document.querySelector(".reg-textbox");
 var addButton = document.querySelector(".addButton");
 var regList = document.querySelector(".reg-plate");
 var registration = document.querySelector(".drop-down");
@@ -102,4 +102,3 @@ function listFiltering(){
 
 }
 filterButton.addEventListener('click', listFiltering);
-*/
